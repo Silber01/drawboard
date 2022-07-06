@@ -76,13 +76,11 @@ class Grid:
 
 
 def main():
-    # thisGrid = Grid(20, 20)
-    # thisGrid.drawLine(1,1, 13, 7, "*")
-    # print(thisGrid)
-    width = 40
-    height = 40
+    width = int(input("Insert width: "))
+    height = int(input("Insert height: "))
+    lines = int(input("Insert amount of lines: "))
     thisGrid = Grid(width, height)
-    for i in range(25):
+    for i in range(lines):
         x1 = randrange(width)
         x2 = randrange(width)
         y1 = randrange(height)
@@ -90,7 +88,7 @@ def main():
         thisGrid.drawLine(x1, y1, x2, y2, chr(ord("A") + i))
         thisGrid.set(x1, y1, "s")
         thisGrid.set(x2, y2, "e")
-        print(thisGrid)
+    print(thisGrid)
         # thisGrid.clear()
 
 
